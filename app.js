@@ -1,16 +1,14 @@
-let numeros = [1,2]
+let numeros = [1,2,3,5,4]
 
 
 let notConsecutive = (array) =>{
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length - 1; i++) {
         let element = array[i]
-        if (array[i+1] - element != 1){
+        let next = array[i +1]
+        if (next - element != 1){
             return element
         }
-        else{
-            return false
-        }
-    }
 }
-
+}
 console.log(notConsecutive(numeros))
+
